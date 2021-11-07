@@ -1,10 +1,8 @@
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.SessionId;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -12,11 +10,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class AmazonTest {
+public class AmazonAppTest {
 
     static AppiumDriver<MobileElement> driver;
     SkipSignUpPage skipSignUpPageElement;
-    private static Logger logger = Logger.getLogger(AmazonTest.class);
+    private static Logger logger = Logger.getLogger(AmazonAppTest.class);
     HomePage homePage;
     private String searchItem = "Oneplus mobile phones";
      SoftAssert softAssert;
