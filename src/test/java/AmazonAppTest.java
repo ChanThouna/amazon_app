@@ -3,6 +3,7 @@ import io.appium.java_client.MobileElement;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.SessionId;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -83,9 +84,9 @@ public class AmazonAppTest {
 //       driver.manage().timeouts().implicitlyWait(2000,TimeUnit.MILLISECONDS);
 //    }
 
-//    @AfterClass(description = "kill the session")
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterClass(description = "kill the session")
+    public void tearDown() {
+        driver.quit();
+    }
 
 }
