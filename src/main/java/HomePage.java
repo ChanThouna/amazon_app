@@ -87,7 +87,7 @@ public class HomePage {
     public void readSearchResults(AppiumDriver driver) throws InterruptedException {
         localAppiumDriver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(localAppiumDriver, Duration.ofSeconds(15)), this);
-    //    localAppiumDriver.manage().timeouts().implicitlyWait(5000,TimeUnit.MILLISECONDS);
+        localAppiumDriver.manage().timeouts().implicitlyWait(5000,TimeUnit.MILLISECONDS);
         List<WebElement> search = localAppiumDriver.findElements(By.xpath("//*[contains(@text, '$')]"));
 //        Assert.assertTrue(search.size() > 0, "Search result not found");
         for (WebElement result : search) {
@@ -98,7 +98,7 @@ public class HomePage {
         String[] text = firstResult.getAttribute("text").split("\\s+");
         price = text[0];
         firstResult.click();
-        System.out.println(" The price shown in Home page is "+price);
+        System.out.println(" The price shown in Home page is " + price);
     }
 
 
